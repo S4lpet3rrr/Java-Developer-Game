@@ -1,5 +1,3 @@
-//package src;
-
 import gmbh.kdb.hsw.gdp.domain.GameDevStudio;
 import gmbh.kdb.hsw.gdp.domain.Office;
 

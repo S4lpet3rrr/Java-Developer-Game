@@ -1,4 +1,3 @@
-
 import gmbh.kdb.hsw.gdp.Game;
 
 public class Main {
