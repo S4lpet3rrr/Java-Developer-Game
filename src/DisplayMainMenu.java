@@ -7,13 +7,14 @@ public class DisplayMainMenu implements Command{
     @Override
     public Command execute(GameDevStudio studio){
         System.out.println(
-                """
-                    Main menu
-                    
-                    
-                    1   Pass
-                    0   Quit
-                    """
+            """
+            ---------------------------------------------
+            Main menu
+                
+            1   Pass
+            0   Quit
+            ---------------------------------------------
+            """
         );
 
         var input = Input.nextLine();
@@ -24,7 +25,10 @@ public class DisplayMainMenu implements Command{
             case "1":
                 return null;
         }
-        System.out.println("m(🤦‍♂️");
+        System.out.println("""
+        
+        wrong input dude
+                            """);
         return this;
     }
 

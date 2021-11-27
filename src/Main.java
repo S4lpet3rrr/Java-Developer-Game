@@ -1,7 +1,5 @@
 //package spiel.demo;
 import gmbh.kdb.hsw.gdp.Game;
-import gmbh.kdb.hsw.gdp.domain.GameDevStudio;
-import java.util.Scanner;
 
 public class Main {
 
@@ -11,7 +9,7 @@ public class Main {
             Command command = new DisplayMainMenu();
 
             do{
-                System.out.println(">>>Execute Command");
+                // System.out.println(">>>Execute Command");
                 command = command.execute(s);
             }while(null != command);
             /*
