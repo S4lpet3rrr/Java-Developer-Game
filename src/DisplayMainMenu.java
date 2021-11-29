@@ -8,7 +8,8 @@ public class DisplayMainMenu implements Command{
             """
             ---------------------------------------------
             Main menu
-                
+            
+            2   Results
             1   Pass
             0   Quit
             ---------------------------------------------
@@ -18,10 +19,12 @@ public class DisplayMainMenu implements Command{
         var input = Input.nextLine();
 
         switch (input){
-            case "0":
+            case "0","Quit":
                 return new QuitGame();
-            case "1":
+            case "1","Pass":
                 return null;
+            case "2","Results":
+                return Handler();
         }
         System.out.println("""
         
