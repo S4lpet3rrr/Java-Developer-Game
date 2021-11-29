@@ -25,13 +25,16 @@ public class SubMenu implements Command {
             case "0", "Quit", "quit", "QUIT":
                 return new QuitGame();
             case "1", "Eventlog", "EVENTLOG", "eventlog":
-                return new EventLog();
+                new EventLog();
+                return this;
             case "2", "office overview", "Office Overview", "Office overview", "office Overview", "OFFICE OVERVIEW":
                 System.out.println("Office is shown");
-                return new PrintOffices();
+                new PrintOffices();
+                return this;
             case "3", "Developers", "developers", "DEVELOPERS":
                 System.out.println("Developers are shown");
-                return new PrintDevelopers();
+                new PrintDevelopers();
+                return this;
             case "4", "Main Menu", "main menu", "Main menu", "main Menu", "MAIN MENU":
                 return new DisplayMainMenu();
         }
