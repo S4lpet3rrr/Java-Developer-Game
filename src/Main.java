@@ -1,7 +1,7 @@
 import gmbh.kdb.hsw.gdp.Game;
 
 public class Main {
-
+    static boolean rEnd;
     public static void main(String[] args) {
 
         var g = Game.create(s -> {

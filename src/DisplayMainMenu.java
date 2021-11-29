@@ -31,15 +31,14 @@ public class DisplayMainMenu implements Command{
                 return new QuitGame();
             case "1", "Pass", "pass", "PASS":
                 System.out.println("Next Round");
+                Main.rEnd = true;
                 return null;
             case "2", "cash", "CASH", "Cash":
                 System.out.println("Cash is shown");
-                new PrintCash();
-                return this;
+                return new PrintCash();
             case "3", "submenu", "Submenu", "SUBMENU":
                 System.out.println("Openning Submenu...");
-                new SubMenu();
-                return this;
+                return new SubMenu();
         }
         System.out.println("""
                 wrong input dude
