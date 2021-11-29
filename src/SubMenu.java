@@ -6,7 +6,7 @@ public class SubMenu implements Command {
     public Command execute(GameDevStudio studio) {
         System.out.println(
                 """
-                        -----------------
+                        -------------------------------------
                         Sub Menu
                                             
                                            
@@ -15,7 +15,7 @@ public class SubMenu implements Command {
                         3   Developers
                         4   Main menu
                         0   Quit
-                        -----------------
+                        -------------------------------------
                         """
         );
 
