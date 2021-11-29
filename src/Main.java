@@ -9,12 +9,12 @@ public class Main {
             System.out.printf("%s Cash = %s   Day = %s\n",
                 s.getName().getName(),
                 s.getCash(),
-                Game.get().getDay());
+                Game.get().getDay().getNumber());
 
                 do{
                     // System.out.println(">>>Execute Command");
                     command = command.execute(s);
-                    System.out.println(Game.get().getDay().getNumber()); 
+                    //System.out.println(Game.get().getDay().getNumber()); 
                 }while(null != command);
             /*
             do { //1 - 3 mal
