@@ -36,7 +36,7 @@ public class DisplayMainMenu implements Command{
                 System.out.println("Cash is shown");
                 return new PrintCash();
             case "3", "submenu", "Submenu", "SUBMENU":
-                System.out.println("Openning Submenu...");
+                System.out.println("Opening Submenu...");
                 return new SubMenu();
         }
         System.out.println("""
