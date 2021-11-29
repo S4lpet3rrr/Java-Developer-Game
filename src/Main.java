@@ -1,7 +1,6 @@
 import gmbh.kdb.hsw.gdp.Game;
 
 public class Main {
-    static boolean rEnd;
     public static void main(String[] args) {
 
         var g = Game.create(s -> {
@@ -15,6 +14,7 @@ public class Main {
                 do{
                     // System.out.println(">>>Execute Command");
                     command = command.execute(s);
+                    System.out.println(Game.get().getDay().getNumber()); 
                 }while(null != command);
             /*
             do { //1 - 3 mal

@@ -31,7 +31,6 @@ public class DisplayMainMenu implements Command{
                 return new QuitGame();
             case "1", "Pass", "pass", "PASS":
                 System.out.println("Next Round");
-                Main.rEnd = true;
                 return null;
             case "2", "cash", "CASH", "Cash":
                 System.out.println("Cash is shown");

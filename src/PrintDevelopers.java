@@ -7,7 +7,7 @@ public class PrintDevelopers implements Command{
     public Command execute(GameDevStudio studio){
         System.out.printf("Developers= %s \n,",
                 studio.getOffices().get(0).getDevelopers());
-        return null;
+        return new SubMenu();
     }
 
 }

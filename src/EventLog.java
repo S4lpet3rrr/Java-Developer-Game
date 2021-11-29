@@ -8,7 +8,7 @@ public class EventLog implements Command{
     public Command execute(GameDevStudio studio){
         System.out.printf("EventLog= %s \n,",
                 Game.get().getEventLog());
-        return null;
+        return new SubMenu();
 
     }
 }

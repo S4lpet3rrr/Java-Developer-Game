@@ -7,6 +7,6 @@ public class PrintOffices implements Command{
     public Command execute(GameDevStudio studio) {
         System.out.printf("Office= %s \n,",
                 studio.getOffices().get(0).getName().getName());
-        return null;
+        return new SubMenu();
     }
 }

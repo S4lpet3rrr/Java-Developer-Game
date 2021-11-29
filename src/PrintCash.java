@@ -7,6 +7,6 @@ public class PrintCash implements Command{
     public Command execute(GameDevStudio studio){
         System.out.printf("Cash= %s \n,",
                 studio.getCash());
-        return null;
+        return new DisplayMainMenu();
     }
 }
