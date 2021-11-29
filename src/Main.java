@@ -7,10 +7,15 @@ public class Main {
         var g = Game.create(s -> {
             Command command = new DisplayMainMenu();
 
-            do{
-                // System.out.println(">>>Execute Command");
-                command = command.execute(s);
-            }while(null != command);
+            System.out.printf("%s Cash = %s   Day = %s\n",
+                s.getName().getName(),
+                s.getCash(),
+                Game.get().getDay());
+
+                do{
+                    // System.out.println(">>>Execute Command");
+                    command = command.execute(s);
+                }while(null != command);
             /*
             do { //1 - 3 mal
             1. Text einlesen
