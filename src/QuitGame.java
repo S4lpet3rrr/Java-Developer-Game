@@ -1,5 +1,3 @@
-//package spiel.demo;
-
 import gmbh.kdb.hsw.gdp.domain.GameDevStudio;
 
 /**
