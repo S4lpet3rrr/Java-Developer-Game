@@ -11,7 +11,7 @@ public class SubMenu implements Command {
                                             
                                            
                         1   Eventlog
-                        2   office overview
+                        2   Office Overview
                         3   Developers
                         4   Main menu
                         0   Quit
@@ -29,7 +29,7 @@ public class SubMenu implements Command {
                 System.out.println("Eventlog is shown");
                 return new EventLog();
             case "2", "office overview", "Office Overview", "Office overview", "office Overview", "OFFICE OVERVIEW":
-                System.out.println("Office is shown");
+                System.out.println("Office Adress is shown");
                 return new PrintOffices();
             case "3", "Developers", "developers", "DEVELOPERS":
                 System.out.println("Developers are shown");
