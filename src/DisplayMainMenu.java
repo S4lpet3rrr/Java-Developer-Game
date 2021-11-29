@@ -10,7 +10,7 @@ public class DisplayMainMenu implements Command{
     public Command execute(GameDevStudio studio){
         System.out.println(
                 """
-                    -----------------
+                    -------------------------------------
                     Main menu
                     
                    
@@ -18,7 +18,7 @@ public class DisplayMainMenu implements Command{
                     2   Cash
                     3   Submenu
                     0   Quit
-                    -----------------
+                    -------------------------------------
                     """
         );
 
