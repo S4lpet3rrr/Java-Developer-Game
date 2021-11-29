@@ -23,8 +23,8 @@ public class DisplayMainMenu implements Command{
                 return new QuitGame();
             case "1","Pass":
                 return null;
-            case "2","Results":
-                return Handler();
+            /*case "2","Results":
+                return Handler();*/
         }
         System.out.println("""
         
