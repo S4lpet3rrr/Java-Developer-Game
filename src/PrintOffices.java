@@ -1,15 +1,12 @@
 import gmbh.kdb.hsw.gdp.domain.GameDevStudio;
-import gmbh.kdb.hsw.gdp.domain.Office;
 
 public class PrintOffices implements Command{
+    Command command = new DisplayMainMenu();
 
-    Office office1 = new Office(null, null);
-    
-    
     @Override
     public Command execute(GameDevStudio studio) {
-        System.out.println("Offices:");
-        return null;
+        System.out.printf("Office= %s \n,",
+                studio.getOffices().get(0).getName().getName());
+        return new SubMenu();
     }
-    
 }
