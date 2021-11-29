@@ -32,20 +32,12 @@ public class DisplayMainMenu implements Command{
             case "1", "Pass", "pass", "PASS":
                 System.out.println("Next Round");
                 return null;
-<<<<<<< Updated upstream
-            /*case "2","Results":
-                return Handler();*/
-=======
-            //case "2", "offices", "OFFICES", "Offices":
-            //  System.out.println("Offices is shown");
-            // return new PrintOffices();
             case "2", "cash", "CASH", "Cash":
                 System.out.println("Cash is shown");
                 return new PrintCash();
             case "3", "submenu", "Submenu", "SUBMENU":
                 System.out.println("Openning Submenu...");
                 return new SubMenu();
->>>>>>> Stashed changes
         }
         return this;
     }

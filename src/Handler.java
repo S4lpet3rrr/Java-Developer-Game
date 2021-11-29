@@ -15,10 +15,6 @@ private static void getEventLog() {
 }
 
  */
-<<<<<<< Updated upstream
 
-}}
-=======
-    }
 }
->>>>>>> Stashed changes
+}
