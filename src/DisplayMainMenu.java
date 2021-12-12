@@ -18,6 +18,7 @@ public class DisplayMainMenu implements Command{
                     2   Cash
                     3   Submenu
                     4   Available Developers
+                    5   Available Projects
                     0   Quit
                     -------------------------------------
                     """
