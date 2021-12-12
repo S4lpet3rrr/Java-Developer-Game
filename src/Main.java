@@ -16,13 +16,6 @@ public class Main {
                     command = command.execute(s);
                     //System.out.println(Game.get().getDay().getNumber()); 
                 }while(null != command);
-            /*
-            do { //1 - 3 mal
-            1. Text einlesen
-            2. Aktion bestimmen
-            3. Ausführen
-            }while ()
-             */
             return true;
         });
 
