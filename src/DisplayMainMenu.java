@@ -38,9 +38,12 @@ public class DisplayMainMenu implements Command{
             case "3", "submenu", "Submenu", "SUBMENU":
                 System.out.println("Opening Submenu...");
                 return new SubMenu();
-            case "4", "list available devs", "List Available Devs", "LIST AVAILABLE DEVS":
+            case "4", "list available devs", "List available Devs", "LIST AVAILABLE DEVS":
                 System.out.println("The available devs: ");
                 return new PrintAvailableDevelopers();
+            case "5", "list available projects", "List available Projects", "LIST AVAILABLE PROJECTS":
+                System.out.println("The available projects: ");
+                return new PrintAvailableProjects();
         }
         System.out.println("""
                 wrong input dude
