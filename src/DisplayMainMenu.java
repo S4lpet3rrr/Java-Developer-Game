@@ -17,6 +17,8 @@ public class DisplayMainMenu implements Command{
                     1   Pass
                     2   Cash
                     3   Submenu
+                    4   Available Developers
+                    5   Available Projects
                     0   Quit
                     -------------------------------------
                     """
@@ -38,6 +40,12 @@ public class DisplayMainMenu implements Command{
             case "3", "submenu", "Submenu", "SUBMENU":
                 System.out.println("Opening Submenu...");
                 return new SubMenu();
+            case "4", "list available devs", "List available Devs", "LIST AVAILABLE DEVS":
+                System.out.println("The available devs: ");
+                return new PrintAvailableDevelopers();
+            case "5", "list available projects", "List available Projects", "LIST AVAILABLE PROJECTS":
+                System.out.println("The available projects: ");
+                return new PrintAvailableProjects();
         }
         System.out.println("""
                 wrong input dude

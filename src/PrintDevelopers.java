@@ -11,10 +11,11 @@ public class PrintDevelopers implements Command{
         System.out.println("Developers");
         for(int i = 0; i < devs.size() ; i++){
             Developer dev = devs.get(i);
-            System.out.println("Name: " + dev.getName().getName() + 
+            /*System.out.println("Name: " + dev.getName().getName() + 
                             "\t| Skills:   Coding: " + dev.getSkills().getCoding() + "\t Research: " + dev.getSkills().getResearch() + 
                                         "\t Testing: " + dev.getSkills().getTesting() + "\t Design: " + dev.getSkills().getDesign() +
-                            "\t| Salary: " + dev.getSalary());
+                            "\t| Salary: " + dev.getSalary());*/
+            System.out.println(dev.toString());
         }
         return new SubMenu();
     }
