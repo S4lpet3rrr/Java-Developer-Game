@@ -14,10 +14,12 @@ public class PrintAvailableProjects implements Command {
         List<Developer> devs = studio.getOffices().get(0).getDevelopers();
         List<Integer> bestDevs = new ArrayList<>();
         
-        System.out.println("Projects");
+        //System.out.println("Projects");
         for(int i = 0; i < projs.size() ; i++){
             Project proj = projs.get(i);
-            System.out.println(i+1 + " " + proj.toString());
+            System.out.println("Project Number: " + (i+1) + "\nProject Name: "
+                + proj.getName().getName() + "\nRequired Skillset: " + proj.getEffort() + 
+                "\nPossible Reward: " + proj.getReward() + "\nCustomer Name: " + proj.getCustomer().getName() + "\n");
            
             List<Integer> maxDay = new ArrayList<>();
             
@@ -80,8 +82,8 @@ public class PrintAvailableProjects implements Command {
                 }
             }
             bestDevs.add(bestDev);
-            System.out.println(bestDev+1 + " " + devs.get(bestDev));
-            System.out.println("Within " + shortestT + " days" );
+            System.out.println(bestDev+1 + " Developer " + PrintDevelopers.devAusgabe(devs.get(bestDev)));
+            System.out.println("Within " + shortestT + " days" + "\n" );
         }
         //Hier
         int input = (int) (Integer.valueOf(Input.nextLine()));

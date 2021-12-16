@@ -1,5 +1,5 @@
 import gmbh.kdb.hsw.gdp.domain.GameDevStudio;
-import gmbh.kdb.hsw.gdp.Game;
+//import gmbh.kdb.hsw.gdp.Game;
 import gmbh.kdb.hsw.gdp.domain.Application;
 import gmbh.kdb.hsw.gdp.domain.Developer;
 import gmbh.kdb.hsw.gdp.domain.Money;
@@ -13,12 +13,18 @@ public class PrintAvailableDevelopers implements Command {
     public Command execute(GameDevStudio studio){
         System.out.println("Available Developers");
         List<Application> apps = new ArrayList<>(studio.getApplications());
+
         for(int i = 0 ; i < apps.size() ; i++){
             Application app = apps.get(i);
-            System.out.println(i+1 + " " + app.toString());
+        
+            System.out.println(i+1 + " " + PrintDevelopers.devAusgabe(app.getDeveloper()) + "\nAgent Fee: " + app.getHireAgentFee() + "\nHire Bonus: " + app.getHireBonus()); // gibt die application aus 
+            /**
+             * Money Hier wird die kohle die übrigbleiben ausgegeben
+             */
             Money remainCash = studio.getCash().subtract(app.getHireAgentFee()).subtract(app.getHireBonus());
-           
+            
             List<Developer> devs = studio.getOffices().get(0).getDevelopers();
+            
             BigDecimal costPerR = studio.getOffices().get(0).getLease().getValue();
             for(int x = 0; x < devs.size() ; x++){
                 costPerR = costPerR.add(devs.get(x).getSalary().getValue());
@@ -30,7 +36,7 @@ public class PrintAvailableDevelopers implements Command {
         }
         //Hier
         int input = (int) (Integer.valueOf(Input.nextLine()));
-        if(input != 0){
+        if(input != 0 && input < apps.size()+1){
             studio.acceptApplication(apps.get(input-1), studio.getOffices().get(0));
             apps.remove(input-1);
             studio.setApplications(apps);
