@@ -35,7 +35,7 @@ public class DisplayMainMenu implements Command{
                 System.out.println("Next Round");
                 return null;
             case "2", "cash", "CASH", "Cash":
-                System.out.println("Cash is shown");
+                System.out.println();
                 return new PrintCash();
             case "3", "submenu", "Submenu", "SUBMENU":
                 System.out.println("Opening Submenu...");
