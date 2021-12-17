@@ -18,10 +18,19 @@ public class PrintDevelopers implements Command{
     }
 
     public static String devAusgabe(Developer dev){
-        return("Name: " + dev.getName().getName() + 
+        if(dev.getWorkingOn() == null) {
+            return("Name: " + dev.getName().getName() + 
                             "\t| Skills:   Coding: " + dev.getSkills().getCoding() + "\t Research: " + dev.getSkills().getResearch() + 
                             "\t Testing: " + dev.getSkills().getTesting() + "\t Design: " + dev.getSkills().getDesign() +
                             "\t| Salary: " + dev.getSalary() +
                             "\t| Working on: " + dev.getWorkingOn());
+        }
+        else {
+            return("Name: " + dev.getName().getName() + 
+                                "\t| Skills:   Coding: " + dev.getSkills().getCoding() + "\t Research: " + dev.getSkills().getResearch() + 
+                                "\t Testing: " + dev.getSkills().getTesting() + "\t Design: " + dev.getSkills().getDesign() +
+                                "\t| Salary: " + dev.getSalary() +
+                                "\t| Working on: " + dev.getWorkingOn().getName().getName());
+        }
     }
 }

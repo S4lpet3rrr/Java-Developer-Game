@@ -18,7 +18,8 @@ public class PrintAvailableProjects implements Command {
         for(int i = 0; i < projs.size() ; i++){
             Project proj = projs.get(i);
             System.out.println("Project Number: " + (i+1) + "\nProject Name: "
-                + proj.getName().getName() + "\nRequired Skillset: " + proj.getEffort() + 
+                + proj.getName().getName() + "\nRequired Skillset: " + proj.getEffort().getCoding() + proj.getEffort().getResearch() 
+                + proj.getEffort().getTesting() + proj.getEffort().getDesign() +
                 "\nPossible Reward: " + proj.getReward() + "\nCustomer Name: " + proj.getCustomer().getName() + "\n");
            
             List<Integer> maxDay = new ArrayList<>();
@@ -87,7 +88,7 @@ public class PrintAvailableProjects implements Command {
         }
         //Hier
         int input = (int) (Integer.valueOf(Input.nextLine()));
-        if(input != 0){
+        if(input != 0 && input < projs.size()+1){
             List<Developer> chosenDevs = new ArrayList<>();
             chosenDevs.add(devs.get(bestDevs.get(input-1)));
             studio.acceptProject(projs.get(input-1), chosenDevs);
