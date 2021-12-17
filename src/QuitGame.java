@@ -1,5 +1,8 @@
 import gmbh.kdb.hsw.gdp.domain.GameDevStudio;
 
+/**
+ * beendet das spiel
+ */
 public class QuitGame implements Command{
 
     /**

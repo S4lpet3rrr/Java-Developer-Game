@@ -1,5 +1,8 @@
 import gmbh.kdb.hsw.gdp.domain.GameDevStudio;
 
+/**
+ * ausgabe des bueros
+ */
 public class PrintOffices implements Command{
     Command command = new DisplayMainMenu();
 

@@ -1,5 +1,8 @@
 import gmbh.kdb.hsw.gdp.domain.GameDevStudio;
 
+/**
+ * ausgabe des main menues
+ */
 public class DisplayMainMenu implements Command{
     int Rundenzahl;
 

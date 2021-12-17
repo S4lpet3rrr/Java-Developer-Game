@@ -1,5 +1,8 @@
 import gmbh.kdb.hsw.gdp.domain.GameDevStudio;
 
+/**
+ * ausgabe des submenues
+ */
 public class SubMenu implements Command {
     /**
      * ausgabe des submenues

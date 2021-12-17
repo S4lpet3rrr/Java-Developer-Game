@@ -2,6 +2,9 @@ import gmbh.kdb.hsw.gdp.domain.GameDevStudio;
 import gmbh.kdb.hsw.gdp.domain.Developer;
 import java.util.List;
 
+/**
+ * ausgabe der angestellten entwickler
+ */
 public class PrintDevelopers implements Command{
 
     Command command = new SubMenu();

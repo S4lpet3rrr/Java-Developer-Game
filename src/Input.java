@@ -1,5 +1,8 @@
 import java.util.Scanner;
 
+/**
+ * scanner implementation als single pattern
+ */
 public class Input {
     private Input() {}
     private static Scanner scanner = null;

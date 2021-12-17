@@ -7,6 +7,9 @@ import gmbh.kdb.hsw.gdp.domain.Developer;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * ausgabe der verfuegbaren projekte
+ */
 public class PrintAvailableProjects implements Command {
     /**
      * ausgabe der verfuegbaren projekte

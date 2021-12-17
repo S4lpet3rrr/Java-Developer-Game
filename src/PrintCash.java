@@ -1,5 +1,8 @@
 import gmbh.kdb.hsw.gdp.domain.GameDevStudio;
 
+/**
+ * ausgabe des aktuellen kontostandes
+ */
 public class PrintCash implements Command{
 
     Command command = new DisplayMainMenu();

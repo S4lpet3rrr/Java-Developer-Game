@@ -1,6 +1,9 @@
 import gmbh.kdb.hsw.gdp.Game;
 import gmbh.kdb.hsw.gdp.domain.GameDevStudio;
 
+/**
+ * ausgabe des eventlogs
+ */
 public class EventLog implements Command{
 
 

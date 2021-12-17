@@ -7,6 +7,9 @@ import java.math.MathContext;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * ausgabe der verfuegbaren entwickler
+ */
 public class PrintAvailableDevelopers implements Command {
     /**
      * ausgabe der verfügbaren entwickler
