@@ -1,5 +1,10 @@
 import gmbh.kdb.hsw.gdp.Game;
 
+/**
+ * GDP Praktikum Testat 1,2 und 3.
+ * @author D.Bender, H.Motz, J.Sieker, M.Berberich
+ * @version 1.0
+ */
 public class Main {
     public static void main(String[] args) {
 
