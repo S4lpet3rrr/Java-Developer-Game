@@ -15,9 +15,12 @@ public class Main {
                 s.getName().getName(),
                 s.getCash(),
                 Game.get().getDay().getNumber());
-/**
- *  PLATZHALTER!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
- */
+                /**
+                 * führt die methode "execute" aus der klasse command aus
+                 * als parameter wird das objekt "s" der klasse gamedevstudio übergeben
+                 * der rückgabewert der methode überschreibt den wert der variable command
+                 * die schleife wiederholt sich, solange command nicht null ist 
+                 */
                 do{
                     command = command.execute(s);
                 }while(null != command);

@@ -41,7 +41,7 @@ public class PrintAvailableDevelopers implements Command {
             }
 
             /**
-             * PLATZHALTER!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+             * get kosten des einzustellenden developers
              */
             costPerR = costPerR.add(app.getDeveloper().getSalary().getValue());
             
