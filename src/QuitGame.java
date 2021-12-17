@@ -1,9 +1,12 @@
 import gmbh.kdb.hsw.gdp.domain.GameDevStudio;
 
-/**
- * Command that quits the current game
- */
 public class QuitGame implements Command{
+
+    /**
+     * beendet das spiel
+     * @param studio
+     * @return null
+     */
     @Override
     public Command execute (GameDevStudio studio){
         System.exit(0);
