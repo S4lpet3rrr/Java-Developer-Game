@@ -9,7 +9,7 @@ import java.util.List;
 
 public class PrintAvailableProjects implements Command {
     /**
-     * ausgabe der verfügbaren projekte
+     * ausgabe der verfuegbaren projekte
      * steuerung durch inputfunktion (auswahl der projekte)
      * automatische zuordnung des best geeigneten entwicklers
      * @param studio
@@ -34,7 +34,7 @@ public class PrintAvailableProjects implements Command {
             List<Integer> maxDay = new ArrayList<>();
             
             /**
-             * fallunterscheidungen, je nach rückgabewert der skills, wie lange ein projekt braucht bis fertigstellung
+             * fallunterscheidungen, je nach rueckgabewert der skills, wie lange ein projekt braucht bis fertigstellung
              */
             for(int x = 0 ; x < devs.size() ; x++){
                 Developer dev = devs.get(x);
@@ -58,7 +58,7 @@ public class PrintAvailableProjects implements Command {
             }
 
             /**
-             * checked kürzeste zeit für projekt mit bestem dev
+             * checked kuerzeste zeit für projekt mit bestem dev
              */
             int shortestT = maxDay.get(0);
             int bestDev = 0;
@@ -88,7 +88,7 @@ public class PrintAvailableProjects implements Command {
     }
 
     /**
-     * ausgabe der anzahl an tage die für das erfüllen eines efforts benötigt wird
+     * ausgabe der anzahl an tage die für das erfuellen eines efforts benoetigt wird
      * @param eSkill (effort skillset)
      * @param dSkill (developer skillset)
      * @return int

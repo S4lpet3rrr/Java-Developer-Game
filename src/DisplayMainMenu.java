@@ -5,13 +5,13 @@ public class DisplayMainMenu implements Command{
 
     /**
      * ausgabe des main menues
-     * mögliche cases 0-5
+     * moegliche cases 0-5
      * 0 - runde beenden
-     * 1 - nächste runde
+     * 1 - naechste runde
      * 2 - ausgabe des geldes
-     * 3 - öffnet submenue
+     * 3 - oeffnet submenue
      * 4 - ausgabe der freien entwickler
-     * 5 - augabe möglicher projekte
+     * 5 - augabe moeglicher projekte
      * @param studio
      * @return Command
      */

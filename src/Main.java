@@ -22,9 +22,9 @@ public class Main {
                 s.getCash(),
                 Game.get().getDay().getNumber());
                 /**
-                 * führt die methode "execute" aus der klasse command aus
-                 * als parameter wird das objekt "s" der klasse gamedevstudio übergeben
-                 * der rückgabewert der methode überschreibt den wert der variable command
+                 * fuehrt die methode "execute" aus der klasse command aus
+                 * als parameter wird das objekt "s" der klasse gamedevstudio uebergeben
+                 * der rueckgabewert der methode ueberschreibt den wert der variable command
                  * die schleife wiederholt sich, solange command nicht null ist 
                  */
                 do{

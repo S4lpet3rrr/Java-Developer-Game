@@ -4,7 +4,7 @@ public class PrintOffices implements Command{
     Command command = new DisplayMainMenu();
 
     /**
-     * ausgabe des büros
+     * ausgabe des bueros
      * @param studio
      * @return SubMenu
      */

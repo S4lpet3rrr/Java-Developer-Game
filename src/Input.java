@@ -6,7 +6,7 @@ public class Input {
 
     /**
      * anwendung des single pattern
-     * rückgabe des scanners
+     * rueckgabe des scanners
      * @return Input.scanner
      */
     public static Scanner get() {
