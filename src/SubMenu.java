@@ -21,6 +21,9 @@ public class SubMenu implements Command {
 
         var input = Input.nextLine();
 
+        /**
+         * auswahlkriterien für menüpunkte (abhängig von userinput)
+         */
         switch (input) {
             case "0", "Quit", "quit", "QUIT":
                 System.out.println("Closing game, noob");

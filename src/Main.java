@@ -10,11 +10,11 @@ public class Main {
                 s.getName().getName(),
                 s.getCash(),
                 Game.get().getDay().getNumber());
-
+/**
+ *  PLATZHALTER!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ */
                 do{
-                    // System.out.println(">>>Execute Command");
                     command = command.execute(s);
-                    //System.out.println(Game.get().getDay().getNumber()); 
                 }while(null != command);
             return true;
         });

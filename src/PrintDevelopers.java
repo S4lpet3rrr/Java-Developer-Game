@@ -5,6 +5,10 @@ import java.util.List;
 public class PrintDevelopers implements Command{
 
     Command command = new SubMenu();
+
+    /**
+     * anzahl developer ausgeben und zuweisen
+     */
     @Override
     public Command execute(GameDevStudio studio){
         List<Developer> devs = studio.getOffices().get(0).getDevelopers();
@@ -12,11 +16,13 @@ public class PrintDevelopers implements Command{
         for(int i = 0; i < devs.size() ; i++){
             Developer dev = devs.get(i);
             System.out.println(devAusgabe(dev));
-            //System.out.println(dev.toString());
         }
         return new SubMenu();
     }
 
+    /**
+     * gibt developer mit ihren eigenschaften aus, je nach dem ob sie an einem projekt arbeiten, wenn nicht return null
+     */
     public static String devAusgabe(Developer dev){
         if(dev.getWorkingOn() == null) {
             return("Name: " + dev.getName().getName() + 

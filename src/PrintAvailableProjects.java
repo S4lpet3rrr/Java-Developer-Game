@@ -14,7 +14,9 @@ public class PrintAvailableProjects implements Command {
         List<Developer> devs = studio.getOffices().get(0).getDevelopers();
         List<Integer> bestDevs = new ArrayList<>();
         
-        //System.out.println("Projects");
+        /**
+         * gibt available projects aus
+         */
         for(int i = 0; i < projs.size() ; i++){
             Project proj = projs.get(i);
             System.out.println("Project Number: " + (i+1) + "\nProject Name: "
@@ -24,9 +26,11 @@ public class PrintAvailableProjects implements Command {
            
             List<Integer> maxDay = new ArrayList<>();
             
+            /**
+             * fallunterscheidungen, je nach rückgabewert der skills, wie lange ein projekt braucht bis fertigstellung
+             */
             for(int x = 0 ; x < devs.size() ; x++){
                 Developer dev = devs.get(x);
-                //System.out.println(x+1 + " " + dev.toString());
                 
                 Skillset pEff = proj.getEffort();
                 Skillset devS = dev.getSkills();
@@ -47,7 +51,7 @@ public class PrintAvailableProjects implements Command {
                 }else{
                     days.add(0);
                 }
-                //Fallunterscheidung 
+            
                 if(pEff.getResearch() != 0 && devS.getResearch() != 0){
                     days.add((int) (Math.ceil((double)pEff.getResearch() / (double)devS.getResearch())));
                 }else if(pEff.getResearch() != 0 && devS.getResearch() == 0){
@@ -71,9 +75,11 @@ public class PrintAvailableProjects implements Command {
                     }
                 }
                 maxDay.add(effDays);
-                //System.out.println(effDays + " Days");
             }
 
+            /**
+             * checked kürzeste zeit für projekt mit bestem dev
+             */
             int shortestT = maxDay.get(0);
             int bestDev = 0;
             for(int z = 1 ; z < devs.size() ; z++){
@@ -86,7 +92,9 @@ public class PrintAvailableProjects implements Command {
             System.out.println(bestDev+1 + " Developer " + PrintDevelopers.devAusgabe(devs.get(bestDev)));
             System.out.println("Within " + shortestT + " days" + "\n" );
         }
-        //Hier
+        /**
+         * aktion basierend auf userinput, filtert falsche eingaben, return mainmenu
+         */
         int input = (int) (Integer.valueOf(Input.nextLine()));
         if(input != 0 && input < projs.size()+1){
             List<Developer> chosenDevs = new ArrayList<>();

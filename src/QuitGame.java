@@ -1,7 +1,7 @@
 import gmbh.kdb.hsw.gdp.domain.GameDevStudio;
 
 /**
- * Command that quits the current game
+ * command, der das aktuelle spiel beendet 
  */
 public class QuitGame implements Command{
     @Override
