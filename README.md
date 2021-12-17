@@ -1,2 +1,5 @@
 # Praktikum
- fill me senpai
+
+jannis sieker, henrik motz, jonas gieschen, damian bender, max wilhelm berberich
+
+hf playing
