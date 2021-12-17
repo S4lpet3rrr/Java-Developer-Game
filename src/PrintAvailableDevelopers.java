@@ -8,6 +8,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PrintAvailableDevelopers implements Command {
+    /**
+     * ausgabe der verfügbaren entwickler
+     * steuerung durch inputfunktion (auswahl der entwickler)
+     * @param studio
+     * @return DisplayMainMenu
+     */
     @Override
     public Command execute(GameDevStudio studio){
         System.out.println("Available Developers");

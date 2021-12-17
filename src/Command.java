@@ -1,7 +1,8 @@
 import gmbh.kdb.hsw.gdp.domain.GameDevStudio;
-/*
-    implementierung vom interface
-*/
+
+/**
+ * implementation des interface
+ */
 @FunctionalInterface
 public interface Command {
     Command execute(GameDevStudio studio);

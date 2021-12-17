@@ -8,6 +8,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PrintAvailableProjects implements Command {
+    /**
+     * ausgabe der verfügbaren projekte
+     * steuerung durch inputfunktion (auswahl der projekte)
+     * automatische zuordnung des best geeigneten entwicklers
+     * @param studio
+     * @return DisplayMainMenu
+     */
     @Override
     public Command execute(GameDevStudio studio){
         List<Project> projs = new ArrayList<>(studio.getProjectBoard().get());
@@ -35,38 +42,11 @@ public class PrintAvailableProjects implements Command {
                 Skillset pEff = proj.getEffort();
                 Skillset devS = dev.getSkills();
                 List<Integer> days = new ArrayList<>();
-                
-                if(pEff.getCoding() != 0 && devS.getCoding() != 0){
-                    days.add((int) (Math.ceil((double)pEff.getCoding() / (double)devS.getCoding())));
-                }else if(pEff.getCoding() != 0 && devS.getCoding() == 0){
-                    days.add(9999);
-                }else{
-                    days.add(0);
-                }
 
-                if(pEff.getDesign() != 0 && devS.getDesign() != 0){
-                    days.add((int) (Math.ceil((double)pEff.getDesign() / (double)devS.getDesign())));
-                }else if(pEff.getDesign() != 0 && devS.getDesign() == 0){
-                    days.add(9999);
-                }else{
-                    days.add(0);
-                }
-            
-                if(pEff.getResearch() != 0 && devS.getResearch() != 0){
-                    days.add((int) (Math.ceil((double)pEff.getResearch() / (double)devS.getResearch())));
-                }else if(pEff.getResearch() != 0 && devS.getResearch() == 0){
-                    days.add(9999);
-                }else{
-                    days.add(0);
-                }
-
-                if(pEff.getTesting() != 0 && devS.getTesting() != 0){
-                    days.add((int) (Math.ceil((double)pEff.getTesting() / (double)devS.getTesting())));
-                }else if(pEff.getTesting() != 0 && devS.getTesting() == 0){
-                    days.add(9999);
-                }else{
-                    days.add(0);
-                }
+                days.add(effTage(pEff.getCoding(),devS.getCoding()));
+                days.add(effTage(pEff.getDesign(),devS.getDesign()));
+                days.add(effTage(pEff.getResearch(),devS.getResearch()));
+                days.add(effTage(pEff.getTesting(),devS.getTesting()));
 
                 int effDays = 0;
                 for(int y = 0 ; y < 4 ; y++){
@@ -106,6 +86,21 @@ public class PrintAvailableProjects implements Command {
         }
         return new DisplayMainMenu();
     }
-    
+
+    /**
+     * ausgabe der anzahl an tage die für das erfüllen eines efforts benötigt wird
+     * @param eSkill (effort skillset)
+     * @param dSkill (developer skillset)
+     * @return int
+     */
+    public int effTage(int eSkill, int dSkill){
+        if(eSkill != 0 && dSkill != 0){
+            return((int) (Math.ceil((double)eSkill / (double)dSkill)));
+        }else if(eSkill != 0 && dSkill == 0){
+            return(9999);
+        }else{
+            return(0);
+        }
+    }
     
 }

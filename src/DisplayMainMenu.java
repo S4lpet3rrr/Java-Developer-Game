@@ -3,6 +3,18 @@ import gmbh.kdb.hsw.gdp.domain.GameDevStudio;
 public class DisplayMainMenu implements Command{
     int Rundenzahl;
 
+    /**
+     * ausgabe des main menues
+     * mögliche cases 0-5
+     * 0 - runde beenden
+     * 1 - nächste runde
+     * 2 - ausgabe des geldes
+     * 3 - öffnet submenue
+     * 4 - ausgabe der freien entwickler
+     * 5 - augabe möglicher projekte
+     * @param studio
+     * @return Command
+     */
     @Override
     public Command execute(GameDevStudio studio){
         System.out.println(

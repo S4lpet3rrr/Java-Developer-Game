@@ -4,7 +4,9 @@ public class PrintOffices implements Command{
     Command command = new DisplayMainMenu();
 
     /**
-     * gibt die adresse des offices aus
+     * ausgabe des büros
+     * @param studio
+     * @return SubMenu
      */
     @Override
     public Command execute(GameDevStudio studio) {

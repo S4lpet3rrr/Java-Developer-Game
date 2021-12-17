@@ -3,9 +3,11 @@ import gmbh.kdb.hsw.gdp.domain.GameDevStudio;
 public class PrintCash implements Command{
 
     Command command = new DisplayMainMenu();
-    
+
     /**
-     * gibt den aktuellen kontostand aus, return mainmenu
+     * ausgabe des aktuellen kontostandes
+     * @param studio
+     * @return DisplayMainMenu
      */
     @Override
     public Command execute(GameDevStudio studio){

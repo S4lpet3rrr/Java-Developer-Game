@@ -5,7 +5,13 @@ import gmbh.kdb.hsw.gdp.Game;
  * @author D.Bender, H.Motz, J.Sieker, M.Berberich
  * @version 1.0
  */
+
 public class Main {
+    /**
+     * initiiert das spiel
+     * beendet die runde wenn command == null ist
+     * @param args
+     */
     public static void main(String[] args) {
 
         var g = Game.create(s -> {

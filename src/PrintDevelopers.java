@@ -7,7 +7,9 @@ public class PrintDevelopers implements Command{
     Command command = new SubMenu();
 
     /**
-     * anzahl developer ausgeben und zuweisen
+     * ausgabe der angestellten entwickler
+     * @param studio
+     * @return SubMenu
      */
     @Override
     public Command execute(GameDevStudio studio){
@@ -21,22 +23,22 @@ public class PrintDevelopers implements Command{
     }
 
     /**
-     * gibt developer mit ihren eigenschaften aus, je nach dem ob sie an einem projekt arbeiten, wenn nicht return null
+     * ausgabe eines objektes vom typ developer als formatierter string
+     * @param dev
+     * @return String
      */
     public static String devAusgabe(Developer dev){
+        String output = "Name: " + dev.getName().getName() +
+                "\t| Skills:   Coding: " + dev.getSkills().getCoding() + "\t Research: " + dev.getSkills().getResearch() +
+                "\t Testing: " + dev.getSkills().getTesting() + "\t Design: " + dev.getSkills().getDesign() +
+                "\t| Salary: " + dev.getSalary();
+
         if(dev.getWorkingOn() == null) {
-            return("Name: " + dev.getName().getName() + 
-                            "\t| Skills:   Coding: " + dev.getSkills().getCoding() + "\t Research: " + dev.getSkills().getResearch() + 
-                            "\t Testing: " + dev.getSkills().getTesting() + "\t Design: " + dev.getSkills().getDesign() +
-                            "\t| Salary: " + dev.getSalary() +
-                            "\t| Working on: " + dev.getWorkingOn());
+            output += "\t| Working on: " + dev.getWorkingOn();
         }
         else {
-            return("Name: " + dev.getName().getName() + 
-                                "\t| Skills:   Coding: " + dev.getSkills().getCoding() + "\t Research: " + dev.getSkills().getResearch() + 
-                                "\t Testing: " + dev.getSkills().getTesting() + "\t Design: " + dev.getSkills().getDesign() +
-                                "\t| Salary: " + dev.getSalary() +
-                                "\t| Working on: " + dev.getWorkingOn().getName().getName());
+            output += "\t| Working on: " + dev.getWorkingOn().getName().getName();
         }
+        return output;
     }
 }

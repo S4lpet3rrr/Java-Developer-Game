@@ -1,7 +1,17 @@
 import gmbh.kdb.hsw.gdp.domain.GameDevStudio;
 
 public class SubMenu implements Command {
-
+    /**
+     * ausgabe des submenues
+     * mögliche cases 0-4
+     * 0 - runde beenden
+     * 1 - ausgabe des eventlogs
+     * 2 - ausgabe des büros
+     * 3 - ausgabe der angestellten entwickler
+     * 4 - rückkehr zum main menu
+     * @param studio
+     * @return Command
+     */
     @Override
     public Command execute(GameDevStudio studio) {
         System.out.println(
@@ -20,7 +30,6 @@ public class SubMenu implements Command {
         );
 
         var input = Input.nextLine();
-
         /**
          * auswahlkriterien für menüpunkte (abhängig von userinput)
          */
